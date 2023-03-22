@@ -114,7 +114,17 @@ Output:
 Explanation: Frequency of 1 is 5.
 '''
 
-
+def findFrequency (arr, n, x):
+    # Your Code Here
+    count = 0
+    
+    for i in range(n):
+        if arr[i] == x:
+            count += 1
+        else:
+            count += 0
+            
+    return count
 
 
 
