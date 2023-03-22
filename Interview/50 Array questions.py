@@ -38,4 +38,16 @@ A[] = {3, 2, 1, 56, 10000, 167}
 Output:
 min = 1, max =  10000
 '''
-
+def getMinMax( a, n):
+    
+    mini = a[0]
+    maxi = a[0]
+    
+    for i in range(n):
+        if a[i]>maxi:
+            maxi = a[i]
+    
+        elif a[i]<mini:
+            mini = a[i]
+            
+    return mini, maxi
