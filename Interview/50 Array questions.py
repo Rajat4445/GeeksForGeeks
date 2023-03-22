@@ -83,3 +83,13 @@ Output: {1, 2, 3, 5}
 Explanation: After sorting array will 
 be like {1, 2, 3, 5}.
 '''
+class Solution:
+    def sortArr(self, arr, n):      
+        
+        for i in range(n):
+            for j in range(n - 1):
+                if arr[j] > arr[j + 1]:
+                    arr[j], arr[j + 1] = arr[j + 1], arr[j]      # (Bubble Sort)
+                    
+        return arr
+    
