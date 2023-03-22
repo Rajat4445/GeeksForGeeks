@@ -62,4 +62,11 @@ Input:
 s = Geeks
 Output: skeeG
 '''
-
+def reverseWord(s):
+    reverse = ''
+    n = len(s)
+    
+    for i in range(n):
+        reverse += s[n-i-1]
+    
+    return reverse
