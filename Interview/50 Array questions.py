@@ -92,4 +92,8 @@ class Solution:
                     arr[j], arr[j + 1] = arr[j + 1], arr[j]      # (Bubble Sort)
                     
         return arr
-    
+  
+class Solution:
+    def sortArr(self, arr, n):      
+                    
+        return sorted(arr)                 ## Built-in function in python
