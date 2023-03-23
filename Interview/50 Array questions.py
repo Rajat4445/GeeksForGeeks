@@ -141,7 +141,22 @@ Explanation:
 0s 1s and 2s are segregated 
 into ascending order.
 '''
+class Solution:
+    def sort012(self,arr,n):
+        
+        count_0 = arr.count(0)
+        count_1 = arr.count(1)
+        count_2 = arr.count(2)
 
+    # Update the array with the sorted values
+        for i in range(count_0):
+            arr[i] = 0
+        for i in range(count_0, count_0 + count_1):
+            arr[i] = 1
+        for i in range(count_0 + count_1, len(arr)):
+            arr[i] = 2
+
+        return arr
 
 
 
