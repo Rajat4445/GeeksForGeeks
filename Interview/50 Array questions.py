@@ -200,7 +200,13 @@ Explanation:
 elements which comes in the union set
 of both arrays. So count is 5.
 '''
-
+class Solution:    
+    #Function to return the count of number of elements in union of two arrays.
+    def doUnion(self,a,n,b,m):
+        
+        out = a+b
+        
+        return len(set(out))
 
 
 
