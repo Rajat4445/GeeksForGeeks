@@ -273,8 +273,15 @@ N = 5
 A[] = {1,2,3,5}
 Output: 4
 '''
-
-
+class Solution:
+    def MissingNumber(self,array,n):
+        array_set = set(array)   # The reason for not using the array has been mentioned below
+        
+        for i in range(1, n+1):
+            if i not in array_set:
+                return i
+# However, the advantage of using a set is that the in operator performs a search in constant time O(1), 
+# whereas searching in a list using the in operator would have a time complexity of O(n).
 
 
 
