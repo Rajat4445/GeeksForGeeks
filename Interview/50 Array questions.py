@@ -254,7 +254,13 @@ string becomes
 much.very.program.this.like.i
 '''
 
-
+    def reverseWords(self,S):
+        # code here
+        words = S.split('.')
+        reverse = words[::-1]
+        output = '.'.join(reverse)
+        
+        return output
 
 
 
