@@ -210,8 +210,6 @@ class Solution:
 
 '''
 Given an array, rotate the array by one position in clock-wise direction.
- 
-
 Example 1:
 
 Input:
@@ -220,5 +218,18 @@ A[] = {1, 2, 3, 4, 5}
 Output:
 5 1 2 3 4
 '''
-
+def rotate( arr, n):
+    
+    last = []
+    first = []
+    
+    for i in range(n):
+        if i<n-1:
+            last.append(arr[i])
+        else:
+            first.append(arr[i])
+            
+    output = first+last
+    
+    return output
 
