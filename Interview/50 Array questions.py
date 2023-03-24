@@ -233,3 +233,9 @@ def rotate( arr, n):
     
     return output
 
+'''
+brr = arr.copy()
+    
+arr[0] = brr[-1]
+arr[1:n] = brr[0:n-1]
+'''
