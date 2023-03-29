@@ -277,7 +277,7 @@ and arr[1] + arr[3] = 5 + 1 = 6.
 '''
 
 class Solution:
-    def getPairsCount(self, arr, n, k):
+    def getPairsCount(self, arr, n, k):                  ##(Hash Table Approach) , it is optimised
         # create a hash table to store the count of each number in arr
         count = {}
         for x in arr:
@@ -293,6 +293,9 @@ class Solution:
 
         # divide the answer by 2 since each pair is counted twice
         return answer // 2
+
+##(My Approach)
+
 
 
 
