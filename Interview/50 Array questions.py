@@ -296,6 +296,20 @@ class Solution:
 
 ##(My Approach)
 
+class Solution:
+    def getPairsCount(self, arr, n, k):
+        # code here
+        output = [[i,j] for i in range(n) for j in range(n) if arr[i]+arr[j]==k]
+
+        out_1 = output.copy()  
+
+        for i in out_1:
+            if i[::-1] in output:
+                output.remove(i)
+                
+        answer = len(output)
+                
+        return answer
 
 
 
