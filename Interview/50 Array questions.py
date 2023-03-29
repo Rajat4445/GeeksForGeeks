@@ -261,6 +261,27 @@ class Solution:
 # whereas searching in a list using the in operator would have a time complexity of O(n).
 
 
+'''
+
+'''
+
+class Solution:
+    def getPairsCount(self, arr, n, k):
+        # create a hash table to store the count of each number in arr
+        count = {}
+        for x in arr:
+            count[x] = count.get(x, 0) + 1
+
+        # iterate over the array and check for pairs
+        answer = 0
+        for x in arr:
+            if k-x in count:
+                answer += count[k-x]
+            if k-x == x:  # if k-x is equal to x, then we need to subtract 1 from count[k-x]
+                answer -= 1
+
+        # divide the answer by 2 since each pair is counted twice
+        return answer // 2
 
 
 
