@@ -328,7 +328,23 @@ Explanation: N=4 and all elements from 0
 to (N-1 = 3) are present in the given
 array. Therefore output is -1.
 '''
+class Solution:
+    def duplicates(self, arr, n): 
+    	# code here
+    	count = {}
+    	for i in arr:
+    	    count[i] = count.get(i, 0) + 1
+    	    
+    	out = []	    
+    	for k, v in count.items():
+    	    if v>1:
+    	        out.append(k)
+    	        
+    	if len(out)==0:
+    	    out.append(-1)
 
+    	return out
+    	    
 
 
 
