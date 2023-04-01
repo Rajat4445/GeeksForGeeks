@@ -344,6 +344,19 @@ class Solution:
     	    out.append(-1)
 
     	return out
+    
+    
+class Solution:                       ## Optimsed solution with O(n)
+    def duplicates(self, arr, n): 
+    	# code here
+    	count = {}
+    	
+    	for i in arr:
+    	    count[i] = count.get(i,0) + 1
+    	    
+    	duplicates = [x for x,v in count.items() if v>1]
+    	
+    	return sorted(duplicates) or [-1]
     	    
 
 
