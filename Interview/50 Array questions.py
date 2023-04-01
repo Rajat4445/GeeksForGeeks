@@ -372,7 +372,17 @@ Output: 20 80
 Explanation: 20 and 80 are the only
 common elements in A, B and C.
 '''
-
+class Solution:
+    def commonElements (self,A, B, C, n1, n2, n3):
+        # your code here
+        set_a = set(A)
+        set_b = set(B)
+        set_c = set(C)
+        
+        out_1 = set_a.intersection(set_b)
+        out = set_c.intersection(out_1)
+        
+        return sorted(list(out))
 
 
 
