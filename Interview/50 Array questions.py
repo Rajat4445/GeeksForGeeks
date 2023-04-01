@@ -280,8 +280,8 @@ class Solution:
     def getPairsCount(self, arr, n, k):                  ##(Hash Table Approach) , it is optimised
         # create a hash table to store the count of each number in arr
         count = {}
-        for x in arr:
-            count[x] = count.get(x, 0) + 1
+        for x in arr:                           ## Inserts how many time each element occurs as a key, value pair
+            count[x] = count.get(x, 0) + 1          # Get is a dictionary method, .get(x,0), if x is available get its value, else get value as 0
 
         # iterate over the array and check for pairs
         answer = 0
