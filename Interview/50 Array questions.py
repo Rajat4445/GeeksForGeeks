@@ -276,7 +276,7 @@ arr[0] + arr[1] = 1 + 5 = 6
 and arr[1] + arr[3] = 5 + 1 = 6.
 '''
 
-class Solution:
+class Solution:    # Try to understand this with arr = [1,2,3,4,5] and K = 6
     def getPairsCount(self, arr, n, k):                  ##(Hash Table Approach) , it is optimised
         # create a hash table to store the count of each number in arr
         count = {}
