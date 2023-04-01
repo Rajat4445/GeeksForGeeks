@@ -288,7 +288,7 @@ class Solution:
         for x in arr:
             if k-x in count:
                 answer += count[k-x]
-            if k-x == x:  # if k-x is equal to x, then we need to subtract 1 from count[k-x]
+            if k-x == x:  # if k-x is equal to x, then we need to subtract 1 from count[k-x], we do this as x paired with iteself (X,X) would give k
                 answer -= 1
 
         # divide the answer by 2 since each pair is counted twice
