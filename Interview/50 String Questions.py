@@ -68,3 +68,22 @@ Input:
 s = V
 Output: 5
 '''
+
+
+class Solution:
+    def romanToDecimal(self, S): 
+        # code here
+        
+        roman_values = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+        result = 0
+        max_value = 0           # Taking case 'III'
+        
+        for i in range(len(S)-1, -1, -1): # index 2 (len(s)-1) to index 0 (-1) with step -1
+            if roman_values[S[i]] >= max_value:
+                result += roman_values[S[i]]
+                max_value = roman_values[S[i]]
+                
+            else:
+                result -= roman_values[S[i]]
+  
+        return result
