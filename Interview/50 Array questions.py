@@ -403,7 +403,27 @@ which is less than 3 whose first
 occuring index is 3.
 '''
 
-
+class Solution:
+    #Function to return the position of the first repeating element.
+    def firstRepeated(self,arr, n):
+        
+        #arr : given array
+        #n : size of the array
+        
+        freq = {}
+        min_index = n+1
+        
+        for i in range(n):
+            if arr[i] in freq:
+                if freq[arr[i]]<min_index:
+                    min_index = freq[arr[i]]
+            else:
+                freq[arr[i]] = i+1
+            
+        if min_index == n+1:
+            return -1
+        else:
+            return min_index
 
 
 
