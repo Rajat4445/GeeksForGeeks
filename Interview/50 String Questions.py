@@ -90,3 +90,17 @@ class Solution:
                 result -= roman_values[S[i]]
   
         return result
+
+## Another approach
+class Solution:
+    def romanToDecimal(self, S): 
+        # code here
+        roman = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+        sumint = 0
+        for i in range(len(S)):
+            if i < len(S) - 1 and roman[S[i]] < roman[S[i+1]]:
+                sumint -= roman[S[i]]
+            else:
+                sumint += roman[S[i]]
+               
+        return sumint
