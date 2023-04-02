@@ -410,20 +410,21 @@ class Solution:
         #arr : given array
         #n : size of the array
         
-        freq = {}
+        d = {}
         min_index = n+1
         
         for i in range(n):
-            if arr[i] in freq:
-                if freq[arr[i]]<min_index:
+            if arr[i] in d:
+                if freq[arr[i]] < min_index: # changes value of index as first occurence of repeated element
                     min_index = freq[arr[i]]
+      
             else:
-                freq[arr[i]] = i+1
-            
+                freq[arr[i]] = i+1      # Stores first 1-based index value of element (minimum)
+                
         if min_index == n+1:
             return -1
-        else:
-            return min_index
+        
+        return min_index
 
 
 
