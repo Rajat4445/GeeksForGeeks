@@ -440,6 +440,12 @@ Explanation:
 the only number occuring once.
 Hence, the output is 3. 
 '''
+class Solution:
+    def firstNonRepeating(self, arr, n):      # Not time optimsed, since we are iterating thorugh each element
+        # Complete the function
+        count = [i for i in arr if arr.count(i) ==1]
+        
+        return count[0] or 0
 
 
 
