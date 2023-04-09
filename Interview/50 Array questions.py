@@ -446,6 +446,22 @@ class Solution:
         count = [i for i in arr if arr.count(i) ==1]
         
         return count[0] or 0
+    
+    
+class Solution:
+    def firstNonRepeating(self, arr, n):       # Optimsed approach
+        # Complete the function
+        count = {}
+        
+        for i in range(n):
+            if arr[i] in count:
+                count[arr[i]] += 1
+            else:
+                count[arr[i]] = 1
+                
+        out = [i for i in arr if count[i]==1]
+        
+        return out[0] or 0
 
 
 
