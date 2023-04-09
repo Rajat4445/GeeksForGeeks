@@ -493,3 +493,24 @@ class Solution:
         return len(out)
             
 
+class Solution:
+    
+    #Function to count subarrays with 1s and 0s.
+    def countSubarrWithEqualZeroAndOne(self, arr, n):     # (optimised approach, using hash table)
+        count = 0
+        diff_map = {0: 1} # initialize with 0 as key and 1 as value
+        diff = 0
+        
+        for i in range(n):
+            if arr[i] == 1:
+                diff += 1
+            else:
+                diff -= 1
+            
+            if diff in diff_map:
+                count += diff_map[diff]
+                diff_map[diff] += 1
+            else:
+                diff_map[diff] = 1
+                
+        return count
