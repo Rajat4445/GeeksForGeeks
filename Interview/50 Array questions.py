@@ -464,4 +464,32 @@ class Solution:
         return out[0] or 0
 
 
+ '''
+ Given an array containing 0s and 1s. Find the number of subarrays having equal number of 0s and 1s.
+
+Example 1:
+
+Input:
+n = 7
+A[] = {1,0,0,1,0,1,1}
+Output: 8
+Explanation: The index range for the 8 
+sub-arrays are: (0, 1), (2, 3), (0, 3), (3, 4), 
+(4, 5) ,(2, 5), (0, 5), (1, 6)
+'''
+    
+class Solution:
+    
+    #Function to count subarrays with 1s and 0s.
+    def countSubarrWithEqualZeroAndOne(self,arr, n):       # Solution works but has O(n^3) time complexity
+        #Your code here
+        out = []
+        
+        for i in range(0,n):
+            for j in range(1, n):
+                if j>i and arr[i:j+1].count(0)==arr[i:j+1].count(1):
+                    out.append((i,j))
+                    
+        return len(out)
+            
 
