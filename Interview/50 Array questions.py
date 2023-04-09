@@ -534,6 +534,21 @@ store them. If any of the positive and negative numbers
 are completed. we will continue with the remaining signed
 elements.The output is 9,-2,4,-1,5,-5,0,-3,2.
 '''
+def rearrange(arr, n):
+    pos = [i for i in arr if i >= 0]
+    neg = [i for i in arr if i < 0]
+    
+    out = []
 
+    while pos and neg:
+        out.append(pos.pop(0))
+        out.append(neg.pop(0))
+
+    # append the remaining elements, if any, from pos or neg
+    out.extend(pos)
+    out.extend(neg)
+        
+    return out
+        
 
 
