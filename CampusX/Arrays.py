@@ -22,3 +22,16 @@ while len(L)!=0:                         # Appends the smallest element in L to 
 print(sorted_array)
 print(f"{k}th largest = {sorted_array[-k]}")
 print(f"{k}th smallest = {sorted_array[k-1]}")
+
+
+
+# # 2. Check if an array is sorted
+L = [1,2,3,4,5]
+
+def check_sorted(arr):       # The function checks if (i+1)th element is greater than the ith element, returns True else False
+    for i in range(len(arr)-1):
+        if arr[i+1]<arr[i]:
+            return False
+    return True
+    
+print(check_sorted(L))
