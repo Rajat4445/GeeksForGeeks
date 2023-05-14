@@ -35,3 +35,23 @@ def check_sorted(arr):       # The function checks if (i+1)th element is greater
     return True
     
 print(check_sorted(L))
+
+# 3. Find Min/Max in a given array
+arr = [21,1,0,34,23,54,11,10, 102]
+
+mini = arr[0]
+maxi = arr[0]
+
+for i in range(len(arr)):
+    if arr[i]<mini:
+        mini = arr[i]
+    elif arr[i]>maxi:        ## elif is used when we want to check multiple conditions in the same loop 
+        maxi = arr[i]
+        
+print(mini, maxi)
+
+
+
+
+
+
