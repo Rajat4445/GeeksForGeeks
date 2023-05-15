@@ -100,3 +100,15 @@ for i in L:
 for k, v in count.items():      # Iterating through key and values
     if v > 1:
         print(k)           # printing all the keys where the values are greater than 1
+
+
+# 6. Rotate array to left d items
+L = [1,2,3,4,5]
+d = 2
+
+one = L[:d]
+two = L[d:]
+
+output = two + one
+
+print(output)
