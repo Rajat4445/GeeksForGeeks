@@ -85,5 +85,18 @@ for i in L:
         if found == n:
             print(i)
             break
+            
+# 5. Find duplicates in an array
+L = [1,1,2,3,4,4,5,5]
 
+count = {}
 
+for i in L:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+        
+for k, v in count.items():      # Iterating through key and values
+    if v > 1:
+        print(k)           # printing all the keys where the values are greater than 1
