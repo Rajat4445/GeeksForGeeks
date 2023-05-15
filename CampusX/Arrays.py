@@ -112,3 +112,12 @@ two = L[d:]
 output = two + one
 
 print(output)
+
+# 7. Find intersection of 2 sorted arrays
+
+a = [1,2,3,4,5,8]
+b = [3,6,7,8]
+
+for i in a:
+    if i in b:
+        print(i)
