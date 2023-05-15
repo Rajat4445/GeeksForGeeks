@@ -66,6 +66,24 @@ for i in L:              # For every element in L
     else:
         count[i] = 1          # if the element is not in the dictionary, add it as a key and give it a value 1
 
+#4. Find the nth (1st, 2nd, 3rd...) element to occur k times in an array
+L = [1,2,1,2,1,3,4,4,5,5]
+k = 2
+n = 3
+count = {}
 
+for i in L:         # Storing number of times each element occurs 
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+    
+found = 0         # Starting with the value 0, we stop at the value of found = n, and that value of i is the required element
+for i in L:
+    if count[i] == k:
+        found += 1
+        if found == n:
+            print(i)
+            break
 
 
