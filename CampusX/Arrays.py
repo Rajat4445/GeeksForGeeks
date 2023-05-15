@@ -50,7 +50,21 @@ for i in range(len(arr)):
         
 print(mini, maxi)
 
+# 4: Find the first element to occur k times in an array
 
+L = [1,2,1,2,1,3,4,4,5,5]
+k = 2
+
+count = {}           # Start with an empty dictionary
+
+for i in L:              # For every element in L
+    if i in count:              # If the element is in the dictionary
+        count[i] += 1              # Then increase its count by 1
+    if i in count and count[i] == k:          # Check if the element is in count and its value is equal to k times
+        print(i)
+        break                # print element and break the loop
+    else:
+        count[i] = 1          # if the element is not in the dictionary, add it as a key and give it a value 1
 
 
 
