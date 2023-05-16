@@ -1,5 +1,3 @@
-# Pasting all the solution by me for the questions
-
 # 1. Find the kth largest/smallest item from a list
 
 L = [12,23,1,4,56,34,22,3]
