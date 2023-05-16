@@ -1,4 +1,4 @@
-# 1. Find the kth largest/smallest item from a list
+#1. Find the kth largest/smallest item from a list
 
 L = [12,23,1,4,56,34,22,3]
 k=3
