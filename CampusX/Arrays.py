@@ -43,7 +43,7 @@ maxi = arr[0]
 for i in range(len(arr)):
     if arr[i]<mini:
         mini = arr[i]
-    elif arr[i]>maxi:        ## elif is used when we want to check multiple conditions in the same loop 
+    elif arr[i]>maxi:        # elif is used when we want to check multiple conditions in the same loop 
         maxi = arr[i]
         
 print(mini, maxi)
