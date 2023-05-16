@@ -76,7 +76,7 @@ for i in L:         # Storing number of times each element occurs
     else:
         count[i] = 1
     
-found = 0         # Starting with the value 0, we stop at the value of found = n, and that value of i is the required element
+found = 0        # Starting with the value 0, we stop at the value of found = n, and that value of i is the required element
 for i in L:
     if count[i] == k:
         found += 1
