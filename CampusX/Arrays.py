@@ -3,7 +3,7 @@
 L = [12,23,1,4,56,34,22,3]
 k=3
 
-def minimum(arr):              ## Function outputs the minimum element in the array
+def minimum(arr):              # Function outputs the minimum element in the array
     mini = arr[0]
     for i in range(len(arr)):
         if arr[i] < mini:
