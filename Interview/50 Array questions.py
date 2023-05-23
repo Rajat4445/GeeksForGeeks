@@ -581,3 +581,13 @@ def zero_sum(arr, n):      # arr is the array and n is the length of the array
         
     return False
 
+'''
+Explanation: In the provided example, when the function is called with the input [4, 2, -3, 1, 6], it goes through the array and checks the prefix sums at each step:
+
+prefix_sum = 4: This value is added to the seen_sums set.
+prefix_sum = 6: This value is added to the seen_sums set.
+prefix_sum = 3: This value is added to the seen_sums set.
+prefix_sum = 4: This value is already present in the seen_sums set, indicating a subarray with zero sum exists.
+The function returns True.
+'''
+
