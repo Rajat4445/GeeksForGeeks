@@ -568,3 +568,16 @@ Explanation:
 with sum 0.
 '''
 
+def zero_sum(arr, n):      # arr is the array and n is the length of the array
+    prefix_sum = 0
+    seen_sums = set()
+    
+    for i in arr:
+        prefix_sum += i
+        
+        if prefix_sum == 0 or prefix_sum in seen_sums:
+            return True
+        seen_sums.add(prefix_sum)
+        
+    return False
+
