@@ -69,7 +69,11 @@ Input:
 s = Geeks
 Output: skeeG
 '''
-
+def reverseWord(s):
+    #your code here
+    reverse = s[::-1]
+    
+    return reverse
 
 
 
