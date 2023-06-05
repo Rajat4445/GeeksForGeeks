@@ -85,6 +85,54 @@ def reverseWord(s):
         
     return reverse
 
+'''
+Given a random set of numbers, Print them in sorted order.
+
+Example 1:
+
+Input:
+N = 4
+arr[] = {1, 5, 3, 2}
+Output: {1, 2, 3, 5}
+Explanation: After sorting array will 
+be like {1, 2, 3, 5}.
+'''
+class Solution:
+    def sortArr(self, arr, n): 
+        #code here
+        copy = arr
+        output = []
+        
+        while len(copy)>0:                        # !! Time limit exceeds here !! Very slow
+            output.append(min(copy))
+            copy.remove(min(copy))
+            
+        return output
+
+# sorted(arr) is the best method which uses minimum time.
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
