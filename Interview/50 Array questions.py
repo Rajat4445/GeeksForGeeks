@@ -16,5 +16,20 @@ It is the peak element as it is
 greater than its neighbour 2.
 If 2 is returned then the generated output will be 1 else 0.
 '''
-
+class Solution:   
+    def peakElement(self,arr, n):
+        # Code here
+        return arr.index(max(arr))       # One liner code
+      
+# Alternative solution
+class Solution:   
+    def peakElement(self,arr, n):
+        # Code here
+        max_element = arr[0]
+        
+        for i in range(n):
+            if arr[i]>max_element:
+                max_element = arr[i]
+                
+        return arr.index(max_element)
 
