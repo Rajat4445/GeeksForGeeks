@@ -141,7 +141,19 @@ class Solution:
         
         return s_array[k-1]     # Brute force approach
 
+class Solution:
+    def kthSmallest(self,arr, l, r, k):
+        
+        copy = arr.copy()
+        s_array = []
+        
+        while len(copy) != 0:               # Exceeds time limit but does the job
 
+            s_array.append(min(copy))
+            copy.remove(min(copy))
+            
+        return s_array[k-1]
+            
 
 
 
