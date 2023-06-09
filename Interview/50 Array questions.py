@@ -197,6 +197,35 @@ def findFrequency (arr, n, x):
     return count
 
 
+'''
+Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
+Example 1:
+
+Input: 
+N = 5
+arr[]= {0 2 1 2 0}
+Output:
+0 0 1 2 2
+Explanation:
+0s 1s and 2s are segregated 
+into ascending order.
+'''
+class Solution:
+    def sort012(self,arr,n):
+        
+        count_0 = arr.count(0)
+        count_1 = arr.count(1)
+        count_2 = arr.count(2)
+
+    # Update the array with the sorted values, this is faster because instead of making a new array, we are modifying the existing
+        for i in range(count_0):
+            arr[i] = 0
+        for i in range(count_0, count_0 + count_1):
+            arr[i] = 1
+        for i in range(count_0 + count_1, len(arr)):
+            arr[i] = 2
+
+        return arr
 
 
 
