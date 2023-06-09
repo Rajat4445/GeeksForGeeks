@@ -175,7 +175,7 @@ def findFrequency (arr, n, x):
 def findFrequency (arr, n, x):
     # Your Code Here
     
-    count = {}
+    count = {}         # Using dictionary approach
     
     for i in arr:
         if i in count:
@@ -184,6 +184,18 @@ def findFrequency (arr, n, x):
             count[i] = 1
             
     return count[x]
+
+def findFrequency (arr, n, x):
+    # Your Code Here
+    
+    count = 0      # Counter approach
+    
+    for i in arr:
+        if i == x:
+            count += 1
+            
+    return count
+
 
 
 
