@@ -104,3 +104,21 @@ class Solution:
                 sumint += roman[S[i]]
                
         return sumint
+    
+    
+'''
+Given a list of words followed by two words, the task to find the minimum distance between the given two words in the list of words
+
+Example 1:
+
+Input:
+S = { "the", "quick", "brown", "fox", 
+     "quick"}
+word1 = "the"
+word2 = "fox"
+Output: 3
+Explanation: Minimum distance between the 
+words "the" and "fox" is 3
+'''
+
+
