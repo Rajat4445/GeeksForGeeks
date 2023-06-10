@@ -120,5 +120,29 @@ Output: 3
 Explanation: Minimum distance between the 
 words "the" and "fox" is 3
 '''
+class Solution:
+	def shortestDistance(self, s, word1, word2):
+		# code here
+		
+		dict_index = {}   # We take all words as keys and their values as an array which stores the index of their occurences
+		
+		for index, value in enumerate(s):
+		    if value in dict_index:
+		        dict_index[value].append(index)
+		    else:
+		        dict_index[value] = [index]
+		        
+		
+		value_1 = dict_index[word1]    # We select the array comprising the indexes of word1
+		value_2 = dict_index[word2]    # We select the array comprising the indexes of word2
+		
+		distances = []        # We store all possible distances between word1 and word2
+		
+		for k in value_1:
+		    for l in value_2:
+		        distances.append(abs(k-l))           # We append all the distance values possible
+		        
+		        
+		return min(distances)          # Outputs minimum distances possible.
 
 
