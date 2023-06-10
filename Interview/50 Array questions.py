@@ -242,7 +242,7 @@ class Solution:
     def segregateElements(self, arr, n):
         
         j = 0
-        for i in range(n):
+        for i in range(n):         # Have a closer look at the loop and values of i and j properly
             if arr[i]<0:
                 temp = arr[i]
                 arr[i] = arr[j]
